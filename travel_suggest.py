@@ -1,4 +1,9 @@
 import streamlit as st
+import cohere
+
+
+# Initialize Cohere client with your API key
+co = cohere.Client('v35Ph8kGEPe88xgfwopailwe9c6nR623gPGNFOta')
 
 
 # Title of the application
@@ -39,14 +44,27 @@ for i in range(0, len(travel_modifiers), num_columns):
 # Display selected modifiers
 st.write('Selected Modifiers:', ', '.join(st.session_state['selected_modifiers']))
 
+def suggest_location(modifiers):
+    modifiers_str = ", ".join(modifiers)
+    prompt = f"Suggest 1 travel location that matches the following attributes and list activities that match the attributes: {modifiers_str}"
+    response = co.generate(
+        model='command',
+        prompt=prompt,
+        max_tokens=500,  # Adjust as needed
+        temperature=0.75,  # Adjust for creativity
+        k=0,
+        p=0.75,
+        frequency_penalty=0,
+        presence_penalty=0
+        # stop_sequences=["\n"],  # Stop generating further if it reaches a newline
+    )
+    return response.generations[0].text.strip()
 
 
-
-# Button to generate and display location suggestion
+# # Button to generate and display location suggestion
 if st.button('Suggest Location'):
     if st.session_state['selected_modifiers']:
-        location_suggestion = 'Dummy, Dummyland'
+        location_suggestion = suggest_location(st.session_state['selected_modifiers'])
         st.write(f"Suggested travel location: {location_suggestion}")
     else:
         st.write("Please select at least one travel preference to get suggestions.")
-
