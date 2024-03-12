@@ -8,6 +8,17 @@ The Travel Suggester App aims to provide users with personalized travel destinat
 
 This application showcases the integration of Cohere's text generation capabilities, offering a seamless and interactive user experience. The project further explores dynamic image fetching based on the suggested location to enhance the visual appeal and provide users with a glimpse of their potential travel destination.
 
+### Command Model Use:
+The suggest_location function demonstrates the innovative use of Cohere's command model, enabling the application to interact with the AI in a conversational manner to produce specific outputs based on generalized inputs. Here's a step-by-step breakdown of how this function operates:
+
+- Modifier Aggregation: The function begins by taking a list of user-selected travel modifiers (such as 'Beach', 'Mountains', 'City', etc.) and joins them into a single string with a comma-separated format. This aggregated string of preferences is crucial for forming a contextually rich prompt that guides the model's generation.
+
+- Prompt Formation: With the aggregated modifiers, the function constructs a detailed prompt that instructs the Cohere model on what information is being requested. The prompt is structured to clearly communicate the task to the model: to suggest a single travel location that matches the listed attributes and to enumerate activities that align with those attributes. The prompt ends with a directive to always place the name of the location at the top, ensuring consistency in the output format for easy extraction.
+
+- Cohere API Call: The constructed prompt is then passed to the Cohere model via a call to the co.generate method. Parameters such as model='command', max_tokens=500, and temperature=0.75 are specified to tailor the generation process. The command model is specifically chosen for its ability to understand and execute instructions embedded within the prompt, making it ideal for applications requiring a high level of comprehension and precision.
+
+- Dynamic Response: The generative nature of Cohere's command model ensures that each set of user preferences yields a unique and tailored suggestion. This dynamic interaction exemplifies the model's understanding of complex inputs and its capability to produce specific, actionable outputs.
+
 ### Backend <br/>
 - Cohere Client Initialization: Sets up the Cohere client with your API key, ready to use its capabilities for generating text based on prompts.
 - Location Suggestion Function (suggest_location): Takes user-selected travel preferences, forms a prompt, and gets a suggestion from Cohere's model. It's designed to ensure the location name is at the top of the generated text for easy extraction.
