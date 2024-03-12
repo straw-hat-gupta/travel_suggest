@@ -15,10 +15,10 @@ This application showcases the integration of Cohere's text generation capabilit
 ### Frontend <br/>
 - Travel Modifiers Setup: Defines a list of travel preferences and dynamically generates a grid of buttons for the user to select their interests.
 - Location Suggestion and Image Display: Once the user finalizes their preferences and requests a location suggestion, the application:
--  Generates a travel suggestion using Cohere.
--  Extracts the location name from the suggestion.
--  fetches and displays an image related to the location.
--  Shows the detailed suggestion text, including activities.
+  -  Generates a travel suggestion using Cohere.
+  -  Extracts the location name from the suggestion.
+  -  fetches and displays an image related to the location.
+  -  Shows the detailed suggestion text, including activities.
 
 ## Reasons for Creating the Project
 - Quick Learning Demonstrated: This project was an opportunity to prove the ability to quickly grasp and effectively implement new technologies. Despite having no previous experience with Cohere's API, the development of a fully functional application in a short period highlights a strong aptitude for learning and adaptation. <br/>
