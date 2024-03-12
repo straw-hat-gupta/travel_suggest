@@ -3,6 +3,12 @@
 ## Overview
 The Travel Suggester App is a lightweight web application built using Streamlit and Cohere's powerful AI API. This project was conceived and developed within a timeframe of under 3 hours, demonstrating rapid learning and implementation skills with no prior experience using the Cohere API.
 
+## Images
+
+<img width="1000" alt="image" src="https://github.com/straw-hat-gupta/travel_suggest/assets/102758221/c8a59d71-5df2-459b-86f6-611ca176f229">
+<img width="647" alt="image" src="https://github.com/straw-hat-gupta/travel_suggest/assets/102758221/15a8d956-bdde-402a-a43e-dc9117ec615e">
+
+
 ## Description of the Project
 The Travel Suggester App aims to provide users with personalized travel destination suggestions based on their preferences such as climate, geography, and activities. By selecting various travel modifiers like "beach", "historical", or "mountains", the user can tailor their search to fit their ideal vacation scenario. Upon submission, the app uses Cohere's AI to generate a specific travel location along with a list of recommended activities unique to that destination.
 
