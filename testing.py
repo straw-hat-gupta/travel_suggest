@@ -46,3 +46,4 @@ def search_image(query):
         return image_url
     else:
         return None
+    
