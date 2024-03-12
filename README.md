@@ -41,3 +41,10 @@ Personal Challenge: The motivation behind this project was not just to build som
 
 ## Conclusion
 The Travel Suggester App is a simple yet effective demonstration of what can be achieved with a powerful AI tool like Cohere's API, combined with a fast learning curve and a passion for tackling new challenges. It reflects a commitment to innovation, continuous learning, and the desire to contribute meaningfully to a team that's at the forefront of AI technology.
+
+
+## Setup:
+
+- clone repo
+- `pip install -r requirements.txt`
+- `streamlit run travel_suggest.py`
