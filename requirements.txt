@@ -1,3 +1,2 @@
-streamlit==0.84.0
-cohere==2021.11.1
-requests==2.25.1
+cohere==4.53
+streamlit==1.32.0
